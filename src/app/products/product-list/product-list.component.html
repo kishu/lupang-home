@@ -15,58 +15,13 @@
 
     <!-- Work Content -->
     <div class="js-shuffle u-portfolio row no-gutters mb-6">
-      <figure class="col-sm-6 col-md-4 u-portfolio__item" data-groups='["its-illustration"]'>
-        <img class="u-portfolio__image" src="assets/img-temp/portfolio/img1.jpg" alt="Image Description">
+      <figure *ngFor="let product of products | async" class="col-sm-6 col-md-4 u-portfolio__item" data-groups='["its-illustration"]'>
+        <img class="u-portfolio__image" [src]="getImageSrc(product)" alt="Image Description">
         <figcaption class="u-portfolio__info">
-          <h6 class="mb-0">IX Project</h6>
-          <small class="d-block">Branding</small>
+          <h6 class="mb-0">{{product.name}}</h6>
+          <small class="d-block">{{product.category}}</small>
         </figcaption>
         <a class="js-popup-image u-portfolio__zoom" href="assets/img-temp/portfolio/img1.jpg">Zoom</a>
-      </figure>
-
-      <figure class="col-sm-6 col-md-4 u-portfolio__item" data-groups='["its-design"]'>
-        <img class="u-portfolio__image" src="assets/img-temp/portfolio/img2.jpg" alt="Image Description">
-        <figcaption class="u-portfolio__info">
-          <h6 class="mb-0">Bottle Design</h6>
-          <small class="d-block">Mockup</small>
-        </figcaption>
-        <a class="js-popup-image u-portfolio__zoom" href="assets/img-temp/portfolio/img2.jpg">Zoom</a>
-      </figure>
-
-      <figure class="col-sm-6 col-md-4 u-portfolio__item" data-groups='["its-graphic"]'>
-        <img class="u-portfolio__image" src="assets/img-temp/portfolio/img3.jpg" alt="Image Description">
-        <figcaption class="u-portfolio__info">
-          <h6 class="mb-0">App Developement</h6>
-          <small class="d-block">Åpp</small>
-        </figcaption>
-        <a class="js-popup-image u-portfolio__zoom" href="assets/img-temp/portfolio/img3.jpg">Zoom</a>
-      </figure>
-
-      <figure class="col-sm-6 col-md-4 u-portfolio__item" data-groups='["its-logo"]'>
-        <img class="u-portfolio__image" src="assets/img-temp/portfolio/img4.jpg" alt="Image Description">
-        <figcaption class="u-portfolio__info">
-          <h6 class="mb-0">Just Bored</h6>
-          <small class="d-block">Freetime</small>
-        </figcaption>
-        <a class="js-popup-image u-portfolio__zoom" href="assets/img-temp/portfolio/img4.jpg">Zoom</a>
-      </figure>
-
-      <figure class="col-sm-6 col-md-4 u-portfolio__item" data-groups='["its-illustration"]'>
-        <img class="u-portfolio__image" src="assets/img-temp/portfolio/img5.jpg" alt="Image Description">
-        <figcaption class="u-portfolio__info">
-          <h6 class="mb-0">Cake Lab</h6>
-          <small class="d-block">Graphic</small>
-        </figcaption>
-        <a class="js-popup-image u-portfolio__zoom" href="assets/img-temp/portfolio/img5.jpg">Zoom</a>
-      </figure>
-
-      <figure class="col-sm-6 col-md-4 u-portfolio__item" data-groups='["its-graphic"]'>
-        <img class="u-portfolio__image" src="assets/img-temp/portfolio/img6.jpg" alt="Image Description">
-        <figcaption class="u-portfolio__info">
-          <h6 class="mb-0">NB Project</h6>
-          <small class="d-block">Logo</small>
-        </figcaption>
-        <a class="js-popup-image u-portfolio__zoom" href="assets/img-temp/portfolio/img6.jpg">Zoom</a>
       </figure>
 
       <!-- sizer -->
