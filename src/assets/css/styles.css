@@ -1087,6 +1087,10 @@ h1, h2, h3, h4, h5, h6 {
   background-size: cover;
 }
 
+.u-promo-block--mheight-300 {
+  min-height: 300px;
+}
+
 .u-promo-block--mheight-450 {
   min-height: 450px;
 }
@@ -1156,6 +1160,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .u-content-space-top {
   padding-top: 6.25rem;
+}
+
+.u-content-space-top-narrow {
+  padding-top: 1.25rem;
 }
 
 .u-content-space-bottom {

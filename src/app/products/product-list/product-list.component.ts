@@ -16,9 +16,7 @@ export class ProductListComponent implements OnInit {
 
   constructor(private productsService: ProductsService) {
     this.imageUrl = environment.imageUrl;
-    this.products = this.productsService.getProducts().pipe(
-      tap(p => console.log(p))
-    );
+    this.products = this.productsService.getProducts();
   }
 
   ngOnInit() {
@@ -28,4 +26,7 @@ export class ProductListComponent implements OnInit {
     return `${this.imageUrl}/${product.images[0].url}`;
   }
 
+  getDataGroups(product) {
+    return `["${product.category}"]`;
+  }
 }

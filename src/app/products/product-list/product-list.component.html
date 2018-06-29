@@ -1,27 +1,35 @@
-<section class="u-content-space">
+<section class="u-content-space u-content-space-top-narrow">
   <div class="container">
-    <header class="text-center w-md-50 mx-auto mb-8">
-      <h2 class="h1">Branding Works</h2>
-      <p class="h5">We design and develope experiances that make people's lives easy and simple.</p>
-    </header>
-
     <ul class="js-shuffle-controls u-portfolio-controls text-center mb-5">
       <li class="u-portfolio-controls__item"><a href="#!" data-group="all" class="active">All</a></li>
-      <li class="u-portfolio-controls__item"><a href="#!" data-group="its-illustration">Illustration</a></li>
-      <li class="u-portfolio-controls__item"><a href="#!" data-group="its-design">Design</a></li>
-      <li class="u-portfolio-controls__item"><a href="#!" data-group="its-graphic">Graphic</a></li>
-      <li class="u-portfolio-controls__item"><a href="#!" data-group="its-logo">Logo</a></li>
+      <li class="u-portfolio-controls__item"><a href="#!" data-group="accessory">Accessory</a></li>
+      <li class="u-portfolio-controls__item"><a href="#!" data-group="electronic">Electronic</a></li>
+      <li class="u-portfolio-controls__item"><a href="#!" data-group="car">Car</a></li>
+      <li class="u-portfolio-controls__item"><a href="#!" data-group="homeware">Homeware</a></li>
+      <li class="u-portfolio-controls__item"><a href="#!" data-group="kids">Kids</a></li>
+      <li class="u-portfolio-controls__item"><a href="#!" data-group="men">Men</a></li>
+      <li class="u-portfolio-controls__item"><a href="#!" data-group="outdoor">Outdoor</a></li>
+      <li class="u-portfolio-controls__item"><a href="#!" data-group="pet">Pet</a></li>
+      <li class="u-portfolio-controls__item"><a href="#!" data-group="sports">Sports</a></li>
+      <li class="u-portfolio-controls__item"><a href="#!" data-group="stationery">Stationery</a></li>
+      <li class="u-portfolio-controls__item"><a href="#!" data-group="toy">Toy</a></li>
+      <li class="u-portfolio-controls__item"><a href="#!" data-group="women">women</a></li>
+      <li class="u-portfolio-controls__item"><a href="#!" data-group="etc">Etc</a></li>
     </ul>
 
     <!-- Work Content -->
     <div class="js-shuffle u-portfolio row no-gutters mb-6">
-      <figure *ngFor="let product of products | async" class="col-sm-6 col-md-4 u-portfolio__item" data-groups='["its-illustration"]'>
-        <img class="u-portfolio__image" [src]="getImageSrc(product)" alt="Image Description">
+      <figure *ngFor="let product of products | async" class="col-sm-6 col-md-4 u-portfolio__item" [attr.data-groups]="getDataGroups(product)">
+        <div class="u_portfolio__badge">
+            <span class="badge badge-warning mr-1 u-portfolio__badge_source">{{product.source | titlecase}}</span>
+            <span class="badge badge-primary mr-1 u-portfolio___badge_originPrice">{{product.originPrice | currency}}</span>
+        </div>
+        <img class="u-portfolio__image" [src]="getImageSrc(product)" [alt]="product.name">
         <figcaption class="u-portfolio__info">
           <h6 class="mb-0">{{product.name}}</h6>
           <small class="d-block">{{product.category}}</small>
         </figcaption>
-        <a class="js-popup-image u-portfolio__zoom" href="assets/img-temp/portfolio/img1.jpg">Zoom</a>
+        <a class="js-popup-image u-portfolio__zoom" [href]="product.link" target="new">Detail</a>
       </figure>
 
       <!-- sizer -->

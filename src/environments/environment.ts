@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'http://localhost:1337',
-  imageUrl: 'http://localhost:1337'
+  apiUrl: 'http://api.alitao.kr',
+  imageUrl: 'http://img.alitao.kr'
 };
 
 /*

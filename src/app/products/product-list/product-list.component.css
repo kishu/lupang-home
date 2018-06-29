@@ -1,0 +1,26 @@
+.u_portfolio__badge {
+  position: absolute;
+  top: 0.8rem;
+  right: 0.8rem;
+}
+.u-portfolio__badge_source {
+  font-size: 120%;
+}
+
+.u-portfolio___badge_originPrice {
+  font-size: 120%;
+}
+
+/* .u_portfolio_source {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.8rem;
+  font-size: 110%;
+}
+
+.u_portfolio_originPrice {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.8rem;
+  font-size: 110%;
+} */

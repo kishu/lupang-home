@@ -1,11 +1,16 @@
 var shuffleMe = (function( $ ) {
   'use strict';
-  var $grid = $('.js-shuffle'),
-      $filterOptions = $('.js-shuffle-controls li'),
-      $sizer = $grid.find('.shuffle_sizer'),
+  // var $grid = $('.js-shuffle'),
+  //     $filterOptions = $('.js-shuffle-controls li'),
+  //     $sizer = $grid.find('.shuffle_sizer'),
+  var $grid, $filterOptions, $sizer,
 
   init = function() {
+    $grid = $('.js-shuffle'),
+    $filterOptions = $('.js-shuffle-controls li'),
+    $sizer = $grid.find('.shuffle_sizer'),
     setTimeout(function() {
+      console.log($grid, $filterOptions, $sizer);
       listen();
       setupFilters();
     }, 100);
@@ -68,5 +73,7 @@ var shuffleMe = (function( $ ) {
 }( jQuery ));
 
 $(document).ready(function() {
-  shuffleMe.init();
+  setTimeout(function() {
+    shuffleMe.init();
+  }, 500);
 });
