@@ -10,7 +10,6 @@ var shuffleMe = (function( $ ) {
     $filterOptions = $('.js-shuffle-controls li'),
     $sizer = $grid.find('.shuffle_sizer'),
     setTimeout(function() {
-      console.log($grid, $filterOptions, $sizer);
       listen();
       setupFilters();
     }, 100);
@@ -75,5 +74,5 @@ var shuffleMe = (function( $ ) {
 $(document).ready(function() {
   setTimeout(function() {
     shuffleMe.init();
-  }, 500);
+  }, 1000);
 });
